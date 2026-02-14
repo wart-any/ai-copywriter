@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AI文案生成器</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+    body {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #f6f7f9;
+    }
+    .box {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    button {
+      background: #0071e3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 16px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>AI 万能文案生成器</h1>
+    <textarea id="input" placeholder="比如：写一条奶茶店开业宣传文案，活泼一点"></textarea>
+    <button onclick="generate()">生成文案</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    async function generate() {
+      const prompt = document.getElementById('input').value;
+      const result = document.getElementById('result');
+      result.innerText = "生成中...";
+
+      // 这里后面换成你自己的API
+      result.innerText = "即将接入AI，你的工具马上完成！";
+    }
+  </script>
+</body>
+</html>
